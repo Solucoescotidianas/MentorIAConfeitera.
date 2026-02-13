@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mentora IA para Confeiteiras - Pare de perder tempo com Instagram e foque em vender mais bolos!">
-    <title>Mentora IA - Confeitaria Lucrativa</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Mentora IA - Confeitaria Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Variáveis e Reset */
+        :root {
+            --purple-deep: #4a1a4c;
+            --white-off: #fdfdfd;
+            --green-cta: #28a745;
+            --text-dark: #333333;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -16,241 +21,125 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #fdfaf8;
-            color: #333;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--white-off);
+            color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
+        /* Header / Hero Section */
         header {
-            background: linear-gradient(135deg, #4a1a4c 0%, #6b2870 100%);
+            background-color: var(--purple-deep);
             color: white;
-            padding: 60px 20px 50px;
+            padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(74, 26, 76, 0.3);
+            border-bottom: 5px solid var(--green-cta);
         }
 
         .container {
-            max-width: 650px;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
         }
 
         h1 {
-            font-size: 32px;
+            font-size: 1.8rem;
             font-weight: 800;
+            text-transform: uppercase;
             line-height: 1.2;
             margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-        }
-
-        .highlight {
-            color: #ffd700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .subheadline {
-            font-size: 18px;
+            font-size: 1.1rem;
             font-weight: 400;
-            line-height: 1.5;
-            margin-top: 15px;
-            opacity: 0.95;
+            opacity: 0.9;
+            margin-bottom: 10px;
         }
 
-        .card {
-            background: white;
-            padding: 40px 25px;
-            border-radius: 20px;
-            margin: -40px auto 40px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
-            position: relative;
-            z-index: 10;
-        }
-
-        .benefits {
-            text-align: left;
-            margin: 30px 0;
+        /* Benefícios */
+        .benefits-section {
+            padding: 30px 10px;
         }
 
         .benefit-item {
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-            font-size: 17px;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            text-align: left;
         }
 
-        .benefit-item::before {
-            content: "✅";
-            font-size: 24px;
-            margin-right: 12px;
-            flex-shrink: 0;
+        .check-icon {
+            color: var(--green-cta);
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2rem;
         }
 
-        .benefit-item strong {
-            font-weight: 700;
-            color: #4a1a4c;
-        }
-
-        .price-section {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%);
-            padding: 25px 20px;
+        /* Seção de Preço */
+        .pricing-box {
+            background: #fff;
+            border: 2px dashed var(--purple-deep);
+            padding: 30px;
             border-radius: 15px;
-            margin: 35px 0 30px;
-            border: 2px dashed #d4a017;
             text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .old-price {
             text-decoration: line-through;
-            color: #dc3545;
-            font-size: 20px;
-            font-weight: 600;
-            display: block;
-            margin-bottom: 8px;
+            color: #888;
+            font-size: 1.1rem;
         }
 
         .new-price {
-            font-size: 42px;
-            font-weight: 800;
-            color: #28a745;
             display: block;
-            line-height: 1.1;
-        }
-
-        .price-label {
-            font-size: 14px;
-            color: #856404;
-            margin-top: 8px;
-            font-weight: 600;
-        }
-
-        .cta-container {
-            margin: 35px 0 25px;
-            text-align: center;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 22px 40px;
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-            color: #ffffff !important;
-            font-size: 22px;
+            font-size: 2.5rem;
             font-weight: 800;
-            text-decoration: none !important;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: var(--purple-deep);
+            margin: 10px 0;
+        }
+
+        /* Botão CTA com Pulse */
+        .cta-button {
+            display: block;
+            background-color: var(--green-cta) !important;
+            color: #ffffff !important;
+            text-decoration: none;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: 800 !important;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 20px rgba(40, 167, 69, 0.4);
             animation: pulse 2s infinite;
-            width: 100%;
-            max-width: 450px;
         }
 
         @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
-            }
-            50% {
-                transform: scale(1.05);
-                box-shadow: 0 12px 35px rgba(40, 167, 69, 0.6);
-            }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(40, 167, 69, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
         }
 
         .cta-button:hover {
-            background: linear-gradient(135deg, #218838 0%, #1aa179 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(40, 167, 69, 0.6);
-        }
-
-        .cta-button:active {
-            transform: translateY(0);
-        }
-
-        .security-badge {
-            font-size: 14px;
-            color: #666;
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .security-badge span {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .urgency-tag {
-            background: #dc3545;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 14px;
-            font-weight: 700;
-            display: inline-block;
-            margin-bottom: 25px;
-            animation: blink 1.5s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
+            transform: scale(1.02);
         }
 
         footer {
-            background: #f8f9fa;
-            padding: 30px 20px;
             text-align: center;
-            font-size: 12px;
-            color: #888;
-            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #999;
+            padding: 40px 20px;
         }
 
-        footer p {
-            margin: 5px 0;
-        }
-
-        /* Responsividade Extra */
+        /* Responsividade */
         @media (max-width: 480px) {
-            h1 {
-                font-size: 26px;
-            }
-
-            .subheadline {
-                font-size: 16px;
-            }
-
-            .new-price {
-                font-size: 36px;
-            }
-
-            .cta-button {
-                font-size: 19px;
-                padding: 20px 30px;
-            }
-
-            .benefit-item {
-                font-size: 16px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 38px;
-            }
-
-            .card {
-                padding: 50px 40px;
-            }
+            h1 { font-size: 1.5rem; }
+            .new-price { font-size: 2rem; }
         }
     </style>
 </head>
@@ -258,62 +147,42 @@
 
     <header>
         <div class="container">
-            <h1>PARE DE QUEIMAR O JUÍZO COM O INSTAGRAM E <span class="highlight">FOQUE EM NÃO QUEIMAR SEUS BOLOS!</span></h1>
+            <h1>PARE DE QUEIMAR O JUÍZO COM O INSTAGRAM E FOQUE EM NÃO QUEIMAR SEUS BOLOS!</h1>
             <p class="subheadline">Ative sua Mentora IA e tenha legendas, roteiros de stories e estratégias de venda prontas em segundos.</p>
         </div>
     </header>
 
-    <div class="container">
-        <div class="card">
-            <div class="urgency-tag">
-                🔥 OFERTA LIMITADA - 50% DE DESCONTO
+    <main class="container">
+        <section class="benefits-section">
+            <div class="benefit-item">
+                <span class="check-icon">✔</span>
+                <p>Legendas magnéticas que fazem o cliente salivar e clicar no link.</p>
             </div>
+            <div class="benefit-item">
+                <span class="check-icon">✔</span>
+                <p>Roteiros de Stories validados para humanizar e vender todo dia.</p>
+            </div>
+            <div class="benefit-item">
+                <span class="check-icon">✔</span>
+                <p>Estratégias de venda direta sem precisar ser expert em marketing.</p>
+            </div>
+            <div class="benefit-item">
+                <span class="check-icon">✔</span>
+                <p>Mais tempo na cozinha e menos tempo "travada" na tela do celular.</p>
+            </div>
+        </section>
 
-            <div class="benefits">
-                <div class="benefit-item">
-                    <span><strong>Legendas Infinitas</strong> que despertam desejo de compra instantâneo</span>
-                </div>
-                <div class="benefit-item">
-                    <span><strong>Roteiros de Stories</strong> prontos para vender sem aparecer</span>
-                </div>
-                <div class="benefit-item">
-                    <span><strong>Respostas de WhatsApp</strong> personalizadas para fechar pedidos</span>
-                </div>
-                <div class="benefit-item">
-                    <span><strong>Estratégias de Precificação</strong> para lucrar de verdade</span>
-                </div>
-                <div class="benefit-item">
-                    <span><strong>Acesso Imediato</strong> direto do seu celular, 24/7</span>
-                </div>
-                <div class="benefit-item">
-                    <span><strong>Suporte Especializado</strong> para confeiteiras iniciantes e avançadas</span>
-                </div>
-            </div>
-
-            <div class="price-section">
-                <span class="old-price">De R$ 97,00</span>
-                <span class="new-price">POR APENAS R$ 47,00</span>
-                <p class="price-label">💰 PAGAMENTO ÚNICO - ACESSO VITALÍCIO</p>
-            </div>
-
-            <div class="cta-container">
-                <a href="https://pay.kiwify.com.br/ecyxekO" class="cta-button" style="color: #ffffff !important;">
-                    🚀 ATIVAR MINHA MENTORA IA AGORA!
-                </a>
-            </div>
-
-            <div class="security-badge">
-                <span>🔒 Pagamento 100% Seguro</span>
-                <span>⚡ Entrega Automática</span>
-                <span>✅ Garantia de 7 Dias</span>
-            </div>
-        </div>
-    </div>
+        <section class="pricing-box">
+            <p class="old-price">De R$ 97</p>
+            <p style="margin-bottom: 0;">Por apenas</p>
+            <span class="new-price">R$ 47</span>
+            <a href="https://pay.kiwify.com.br/ecyxekO" class="cta-button">QUERO MINHA MENTORA AGORA</a>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">💳 Pagamento seguro via Kiwify</p>
+        </section>
+    </main>
 
     <footer>
-        <p><strong>&copy; 2026 Mentora IA Confeitaria</strong></p>
-        <p>Todos os direitos reservados.</p>
-        <p style="margin-top: 15px; font-size: 11px;">Este produto é comercializado com garantia de satisfação. Se você não gostar, basta solicitar o reembolso em até 7 dias.</p>
+        <p>&copy; 2024 - Todos os direitos reservados à sua Confeitaria Premium.</p>
     </footer>
 
 </body>
