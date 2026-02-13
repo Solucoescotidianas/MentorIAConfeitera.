@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentora IA - Confeitaria Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Variáveis e Reset */
+        :root {
+            --purple-deep: #4a1a4c;
+            --white-off: #fdfdfd;
+            --green-cta: #28a745;
+            --text-dark: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--white-off);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background-color: var(--purple-deep);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--green-cta);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .subheadline {
+            font-size: 1.1rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        /* Benefícios */
+        .benefits-section {
+            padding: 30px 10px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .check-icon {
+            color: var(--green-cta);
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Seção de Preço */
+        .pricing-box {
+            background: #fff;
+            border: 2px dashed var(--purple-deep);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 1.1rem;
+        }
+
+        .new-price {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--purple-deep);
+            margin: 10px 0;
+        }
+
+        /* Botão CTA com Pulse */
+        .cta-button {
+            display: block;
+            background-color: var(--green-cta) !important;
+            color: #ffffff !important;
+            text-decoration: none;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: 800 !important;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 20px rgba(40, 167, 69, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(40, 167, 69, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+        }
+
+        .cta-button:hover {
+            transform: scale(1.02);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+            padding: 40px 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem; }
+            .new-price { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>PARE DE QUEIMAR O JUÍZO COM O INSTAGRAM E FOQUE EM NÃO QUEIMAR SEUS BOLOS!</h1>
+            <p class="subheadline">Ative sua Mentora IA e tenha legendas, roteiros de stories e estratégias de venda prontas em segundos.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="benefits-section">
+            <div class="benefit-item">
+                <span class="check-icon">✔</span>
+                <p>Legendas magnéticas que fazem o cliente salivar e clicar no link.</p>
+            </div>
+            <div class="benefit-item">
+                <span class="check-icon">✔</span>
+                <p>Roteiros de Stories validados para humanizar e vender todo dia.</p>
+            </div>
+            <div class="benefit-item">
+                <span class="check-icon">✔</span>
+                <p>Estratégias de venda direta sem precisar ser expert em marketing.</p>
+            </div>
+            <div class="benefit-item">
+                <span class="check-icon">✔</span>
+                <p>Mais tempo na cozinha e menos tempo "travada" na tela do celular.</p>
+            </div>
+        </section>
+
+        <section class="pricing-box">
+            <p class="old-price">De R$ 97</p>
+            <p style="margin-bottom: 0;">Por apenas</p>
+            <span class="new-price">R$ 47</span>
+            <a href="https://pay.kiwify.com.br/ecyxekO" class="cta-button">QUERO MINHA MENTORA AGORA</a>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">💳 Pagamento seguro via Kiwify</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Todos os direitos reservados à sua Confeitaria Premium.</p>
+    </footer>
+
+</body>
+</html>
