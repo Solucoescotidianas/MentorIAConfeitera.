@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentora IA - Confeitaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset de Estilo */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdfaf8; /* Fundo suave creme */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho Impactante */
+        header {
+            background: linear-gradient(135deg, #4a1a4c 0%, #6d2d73 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid #ffcc00;
+        }
+
+        .container { max-width: 500px; margin: 0 auto; padding: 20px; }
+
+        h1 { font-size: 26px; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; }
+        .highlight { color: #ffcc00; }
+
+        /* Card de Oferta */
+        .main-card {
+            background: white;
+            margin-top: -30px;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .benefit-list { text-align: left; margin: 20px 0; list-style: none; }
+        .benefit-list li { margin-bottom: 12px; font-size: 16px; display: flex; align-items: center; }
+        .benefit-list li::before { content: '✨'; margin-right: 10px; }
+
+        /* O BOTÃO (ESTILO CANVA) - FORÇANDO CORES */
+        .cta-wrapper { margin: 30px 0; }
+        
+        .btn-link {
+            display: block;
+            background-color: #28a745 !important; /* VERDE FORÇADO */
+            color: #ffffff !important; /* TEXTO BRANCO FORÇADO */
+            text-decoration: none !important;
+            padding: 22px 10px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 12px;
+            text-transform: uppercase;
+            box-shadow: 0 8px 0 #1e7e34;
+            transition: all 0.2s;
+            animation: pulse 1.5s infinite;
+        }
+
+        .btn-link:active { transform: translateY(4px); box-shadow: 0 2px 0 #1e7e34; }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .price-container { margin-bottom: 10px; }
+        .old-price { text-decoration: line-through; color: #888; font-size: 16px; }
+        .new-price { font-size: 36px; font-weight: bold; color: #4a1a4c; display: block; }
+
+        footer { text-align: center; padding: 40px; font-size: 12px; color: #aaa; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Cansada de não vender? <span class="highlight">Use IA na sua Confeitaria!</span></h1>
+            <p>Tenha legendas e estratégias prontas em segundos.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-card">
+            <ul class="benefit-list">
+                <li>Legendas que geram desejo</li>
+                <li>Roteiros de stories prontos</li>
+                <li>Scripts de vendas p/ WhatsApp</li>
+                <li>Mais tempo na cozinha, menos no celular</li>
+            </ul>
+
+            <div class="price-container">
+                <span class="old-price">De R$ 97,00</span>
+                <span class="new-price">POR R$ 47,00</span>
+            </div>
+
+            <div class="cta-wrapper">
+                <a href="https://pay.kiwify.com.br/ecyxekO" class="btn-link">
+                    Quero Ativar Minha Mentora IA
+                </a>
+            </div>
+            
+            <p style="font-size: 12px; color: #777;">Acesso imediato após o pagamento</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Mentora IA Confeitaria - Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
