@@ -4,37 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentora IA - Confeitaria Premium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Variáveis e Reset */
-        :root {
-            --purple-deep: #4a1a4c;
-            --white-off: #fdfdfd;
-            --green-cta: #28a745;
-            --text-dark: #333333;
-        }
-
+        /* RESET E BASE */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--white-off);
-            color: var(--text-dark);
+            background-color: #ffffff;
+            color: #333;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* Header / Hero Section */
+        /* HEADER / HERO */
         header {
-            background-color: var(--purple-deep);
-            color: white;
+            background-color: #4a1a4c;
+            color: #ffffff;
             padding: 40px 20px;
             text-align: center;
-            border-bottom: 5px solid var(--green-cta);
+            border-bottom: 5px solid #d4af37; /* Detalhe em dourado para o look Premium */
         }
 
         .container {
@@ -45,10 +40,10 @@
 
         h1 {
             font-size: 1.8rem;
-            font-weight: 800;
-            text-transform: uppercase;
+            font-weight: 900;
             line-height: 1.2;
             margin-bottom: 20px;
+            text-transform: uppercase;
         }
 
         .subheadline {
@@ -58,9 +53,10 @@
             margin-bottom: 10px;
         }
 
-        /* Benefícios */
-        .benefits-section {
-            padding: 30px 10px;
+        /* SEÇÃO DE BENEFÍCIOS */
+        .benefits {
+            padding: 40px 20px;
+            background-color: #fcf8fc;
         }
 
         .benefit-item {
@@ -71,75 +67,76 @@
             text-align: left;
         }
 
-        .check-icon {
-            color: var(--green-cta);
-            font-weight: bold;
+        .benefit-item svg {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            fill: #28a745;
             margin-right: 15px;
-            font-size: 1.2rem;
         }
 
-        /* Seção de Preço */
-        .pricing-box {
-            background: #fff;
-            border: 2px dashed var(--purple-deep);
-            padding: 30px;
-            border-radius: 15px;
+        /* PREÇO */
+        .price-section {
             text-align: center;
-            margin: 30px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 30px 20px;
+            background: #fff;
         }
 
         .old-price {
             text-decoration: line-through;
             color: #888;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         .new-price {
             display: block;
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--purple-deep);
+            font-size: 3rem;
+            font-weight: 900;
+            color: #4a1a4c;
             margin: 10px 0;
         }
 
-        /* Botão CTA com Pulse */
-        .cta-button {
-            display: block;
-            background-color: var(--green-cta) !important;
+        /* BOTÃO CTA COM ANIMAÇÃO */
+        .btn-cta {
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            padding: 22px 10px;
+            background-color: #28a745 !important;
             color: #ffffff !important;
-            text-decoration: none;
+            text-decoration: none !important;
+            font-weight: bold !important;
+            font-size: 1.4rem;
+            border-radius: 10px;
             text-align: center;
-            padding: 20px;
-            font-size: 1.3rem;
-            font-weight: 800 !important;
-            border-radius: 50px;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 20px rgba(40, 167, 69, 0.4);
+            transition: transform 0.2s;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(40, 167, 69, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
-        .cta-button:hover {
+        .btn-cta:hover {
             transform: scale(1.02);
+            filter: brightness(1.1);
         }
 
+        /* RODAPÉ */
         footer {
+            padding: 20px;
             text-align: center;
             font-size: 0.8rem;
             color: #999;
-            padding: 40px 20px;
         }
 
-        /* Responsividade */
+        /* RESPONSIVIDADE ADICIONAL */
         @media (max-width: 480px) {
             h1 { font-size: 1.5rem; }
-            .new-price { font-size: 2rem; }
+            .new-price { font-size: 2.5rem; }
         }
     </style>
 </head>
@@ -152,37 +149,40 @@
         </div>
     </header>
 
-    <main class="container">
-        <section class="benefits-section">
+    <section class="benefits">
+        <div class="container">
             <div class="benefit-item">
-                <span class="check-icon">✔</span>
-                <p>Legendas magnéticas que fazem o cliente salivar e clicar no link.</p>
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Legendas prontas que vendem seus doces.</span>
             </div>
             <div class="benefit-item">
-                <span class="check-icon">✔</span>
-                <p>Roteiros de Stories validados para humanizar e vender todo dia.</p>
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Roteiros de Stories para humanizar sua marca.</span>
             </div>
             <div class="benefit-item">
-                <span class="check-icon">✔</span>
-                <p>Estratégias de venda direta sem precisar ser expert em marketing.</p>
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Calendário de postagens estratégico.</span>
             </div>
             <div class="benefit-item">
-                <span class="check-icon">✔</span>
-                <p>Mais tempo na cozinha e menos tempo "travada" na tela do celular.</p>
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Mais tempo livre para produzir suas encomendas.</span>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="pricing-box">
-            <p class="old-price">De R$ 97</p>
-            <p style="margin-bottom: 0;">Por apenas</p>
+    <section class="price-section">
+        <div class="container">
+            <span class="old-price">De R$ 97</span>
             <span class="new-price">R$ 47</span>
-            <a href="https://pay.kiwify.com.br/ecyxekO" class="cta-button">QUERO MINHA MENTORA AGORA</a>
+            <a href="https://pay.kiwify.com.br/ecyxekO" class="btn-cta">QUERO MINHA MENTORA IA AGORA!</a>
             <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">💳 Pagamento seguro via Kiwify</p>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 - Todos os direitos reservados à sua Confeitaria Premium.</p>
+        <div class="container">
+            <p>&copy; 2024 Mentora IA - Todos os direitos reservados.</p>
+        </div>
     </footer>
 
 </body>
